@@ -5,10 +5,10 @@ const port = 3000;
 
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
-    res.setHeader('Context-Type','text/plain');
-    res.end('Hola Mundo');
+    res.setHeader('Context-Type','application/json');
+    res.end('{"mensaje": "Hola Mundo!!"}');
 });
 
 server.listen(port, hostname, ()=>{
-    console.log('Iniciando Servidor Web');
+    console.log(`Server running at http://${hostname}:${port}/`);
 })
